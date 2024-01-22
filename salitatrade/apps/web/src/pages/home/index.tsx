@@ -1,5 +1,6 @@
 import { useCallback, useLayoutEffect, useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { NextPage } from 'next';
 import {
   Select,
@@ -21,6 +22,7 @@ import { DatePickerInput, DatesRangeValue } from '@mantine/dates';
 import { userApi } from 'resources/user';
 
 import { Table } from 'components';
+import { RoutePath } from 'routes';
 
 import { PER_PAGE, columns, selectOptions } from './constants';
 
@@ -91,6 +93,8 @@ const Home: NextPage = () => {
       </Head>
       <Stack gap="lg">
         <Title order={2}>Users</Title>
+
+        <Link href={RoutePath.Cart}>Cart</Link>
 
         <Group wrap="nowrap" justify="space-between">
           <Group wrap="nowrap">
