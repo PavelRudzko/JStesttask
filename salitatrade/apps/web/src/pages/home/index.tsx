@@ -95,7 +95,7 @@ const Home: NextPage = () => {
         <Title order={2}>Users</Title>
 
         <Link href={RoutePath.Cart}>Cart</Link>
-
+        <Link href={RoutePath.Shop}>Cart</Link>
         <Group wrap="nowrap" justify="space-between">
           <Group wrap="nowrap">
             <Skeleton
