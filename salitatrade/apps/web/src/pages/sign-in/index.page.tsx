@@ -13,14 +13,14 @@ import { handleError } from 'utils';
 import { RoutePath } from 'routes';
 import { Link } from 'components';
 
-import { EMAIL_REGEX } from 'app-constants';
+import { EMAIL_REGEX, PASSWORD_REGEX } from 'app-constants';
 
 import { GoogleIcon } from 'public/icons';
 
 const schema = z.object({
   email: z.string().regex(EMAIL_REGEX, 'Email format is incorrect.'),
-  password: z.string().min(8, 'Password must be at least 8 characters long')
-         //.matches (/^(?=.*[a-z])/, 'Password must contain at least one lowercase letter'),
+  password: z.string().regex(PASSWORD_REGEX, 'Password is not correct')
+         
 });
 
 type SignInParams = z.infer<typeof schema> & { credentials?: string };
