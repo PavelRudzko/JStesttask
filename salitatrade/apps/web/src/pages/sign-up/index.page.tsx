@@ -27,12 +27,13 @@ import { RoutePath } from 'routes';
 import { EMAIL_REGEX, PASSWORD_REGEX } from 'app-constants';
 
 import { GoogleIcon } from 'public/icons';
+import classes from './index.module.css'
 
 const schema = z.object({
   firstName: z.string().min(1, 'Please enter First name').max(100),
   lastName: z.string().min(1, 'Please enter Last name').max(100),
   email: z.string().regex(EMAIL_REGEX, 'Email format is incorrect.'),
-  password: z.string().regex(PASSWORD_REGEX, 'The password must contain 6 or more characters with at least one letter (a-z) and one number (0-9).'),
+  password: z.string().regex(PASSWORD_REGEX, 'The password must contain 8 or more characters with at least one letter (a-z) and one number (0-9).'),
 });
 
 type SignUpParams = z.infer<typeof schema>;
@@ -59,7 +60,10 @@ const SignUp: NextPage = () => {
 
   const [passwordRulesData, setPasswordRulesData] = useState(passwordRules);
   const [opened, setOpened] = useState(false);
-
+  const [isChecked, setIsChecked] = useState(false);
+   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setIsChecked(event.target.checked);
+  }
   const {
     register,
     handleSubmit,
@@ -75,7 +79,7 @@ const SignUp: NextPage = () => {
   useEffect(() => {
     const updatedPasswordRulesData = [...passwordRules];
 
-    updatedPasswordRulesData[0].done = passwordValue.length >= 6 && passwordValue.length <= 50;
+    updatedPasswordRulesData[0].done = passwordValue.length >= 8 && passwordValue.length <= 50;
     updatedPasswordRulesData[1].done = /[a-zA-Z]/.test(passwordValue);
     updatedPasswordRulesData[2].done = /\d/.test(passwordValue);
 
@@ -153,21 +157,21 @@ const SignUp: NextPage = () => {
 
           <form onSubmit={handleSubmit(onSubmit)}>
             <Stack gap={20}>
-              <TextInput
+              {/* <TextInput
                 {...register('firstName')}
                 label="First Name"
                 maxLength={100}
                 placeholder="First Name"
                 error={errors.firstName?.message}
-              />
+              /> */}
 
-              <TextInput
+              {/* <TextInput
                 {...register('lastName')}
                 label="Last Name"
                 maxLength={100}
                 placeholder="Last Name"
                 error={errors.lastName?.message}
-              />
+              /> */}
 
               <TextInput
                 {...register('email')}
@@ -198,7 +202,7 @@ const SignUp: NextPage = () => {
               fullWidth
               mt={34}
             >
-              Sign Up
+              Create account
             </Button>
           </form>
         </Stack>
@@ -212,6 +216,31 @@ const SignUp: NextPage = () => {
           >
             Continue with Google
           </Button>
+
+          <Checkbox
+        id="checkbox-id"
+        label = "Must be at least 8 characters"
+        checked={isChecked}
+        onChange={handleCheckboxChange}
+      >   
+      </Checkbox>
+
+      <Checkbox
+        id="checkbox-id"
+        label = "Must contain at least 1 number "
+        checked={isChecked}
+        onChange={handleCheckboxChange}
+      >   
+      </Checkbox>
+
+      <Checkbox
+        id="checkbox-id"
+        label = "Must contain lower case and capital letter "
+        checked={isChecked}
+        onChange={handleCheckboxChange}
+      >   
+      </Checkbox>
+          
 
           <Group fz={16} justify="center" gap={12}>
             Have an account?
@@ -231,3 +260,5 @@ const SignUp: NextPage = () => {
 };
 
 export default SignUp;
+
+

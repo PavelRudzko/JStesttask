@@ -19,7 +19,8 @@ import { GoogleIcon } from 'public/icons';
 
 const schema = z.object({
   email: z.string().regex(EMAIL_REGEX, 'Email format is incorrect.'),
-  password: z.string().min(1, 'Please enter password'),
+  password: z.string().min(8, 'Password must be at least 8 characters long')
+         //.matches (/^(?=.*[a-z])/, 'Password must contain at least one lowercase letter'),
 });
 
 type SignInParams = z.infer<typeof schema> & { credentials?: string };
@@ -116,3 +117,7 @@ const SignIn: NextPage = () => {
 };
 
 export default SignIn;
+
+
+
+

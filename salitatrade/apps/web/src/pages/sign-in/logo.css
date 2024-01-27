@@ -1,0 +1,88 @@
+/* Group 39803 */
+
+position:a absolute;
+width: 135.3px;
+height: 40.13px;
+left: 48px;
+top: 83.24px;
+
+
+
+/* Shopy */
+
+position: absolute;
+width: 88px;
+height: 31px;
+left: 95.3px;
+top: 87.29px;
+
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 28.9854px;
+line-height: 31px;
+/* identical to box height, or 105% */
+
+/* Black 600 */
+color: #201F22;
+
+
+
+/* Mask group */
+
+position: absolute;
+width: 36.62px;
+height: 40.13px;
+left: 48px;
+top: 83.24px;
+
+
+
+/* Polygon 3 */
+
+position: absolute;
+width: 36.62px;
+height: 40.13px;
+left: 48px;
+top: 83.24px;
+
+background: #C4C4C4;
+
+
+/* Rectangle 4507 */
+
+position: absolute;
+width: 23.17px;
+height: 23.17px;
+left: 66.31px;
+top: 81.82px;
+
+/* Black 200 */
+background: #CFCFCF;
+transform: matrix(0.87, 0.5, -0.87, 0.5, 0, 0);
+
+
+/* Rectangle 4508 */
+
+position: absolute;
+width: 21.32px;
+height: 21.32px;
+left: 47.84px;
+top: 93.58px;
+
+/* Black 400 */
+background: #767676;
+transform: matrix(0.87, 0.5, 0, 1, 0, 0);
+
+
+/* Rectangle 4509 */
+
+position: absolute;
+width: 21.32px;
+height: 21.32px;
+left: 66.31px;
+top: 104.24px;
+
+/* Black 600 */
+background: #201F22;
+transform: matrix(0.87, -0.5, 0, 1, 0, 0);

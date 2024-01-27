@@ -1,0 +1,73 @@
+/* text */
+.text{
+width: 135px;
+height: 24px;
+}
+/* Body/md/Text md regular */
+.body {
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+}
+/* Black 600 */
+.black{
+color: #201F22;
+}
+
+/* Inside auto layout */
+.layout {
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.Button {
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 4px 20px;
+gap: 10px;
+
+width: 408px;
+height: 40px;
+
+/* Blue 600 */
+background: #2B77EB;
+border-radius: 8px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+
+
+
+width: 105px;
+height: 21px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 21px;
+/* identical to box height, or 150% */
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
