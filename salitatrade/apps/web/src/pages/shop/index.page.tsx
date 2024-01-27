@@ -148,7 +148,7 @@ const Shop: NextPage = () => {
                   <a href="#" className={headerClasses.link}>
                     <Center inline>
                       <Box component="span" mr={5}>
-                        Features
+                        Marketplace
                       </Box>
                       <IconChevronDown
                         style={{ width: rem(16), height: rem(16) }}
@@ -191,7 +191,7 @@ const Shop: NextPage = () => {
                 Learn
               </a>
               <a href="#" className={headerClasses.link}>
-                Academy
+                Your products
               </a>
             </Group>
 
