@@ -8,8 +8,6 @@ import {
 } from '@mantine/core';
 
 import { useState } from 'react'; 
-
-
 import classes from '.HeaderMegaMenu.module.css'
 
 
@@ -44,6 +42,8 @@ import {
   IconChevronDown,
 } from '@tabler/icons-react';
 import headerClasses from './HeaderMegaMenu.module.css';
+ //const [minPrice, setMinPrice] = useState("");
+  //const [maxPrice, setMaxPrice] = useState("");
 
 const mockdata = [
   {
@@ -128,21 +128,45 @@ const Shop: NextPage = () => {
 
   return (
     <>
-      <Head>
-        <title>Shopy</title>        
-      </Head>
+      {/* <Head>
+        <title>Shop1</title>        
+      </Head> */}      
       <Stack gap="lg">
         <Title order={2}>Shopy</Title>
-      </Stack>
+        </Stack>
+
+
+<div className='Filters'>
+  <h2>Filters</h2>
+  <button>Reset all X</button>
+  <div className='Price'></div>
+  <h3>Price</h3> 
+  <input type="text" name="minPrice" 
+  placeholder='min' />
+  {/* value={minPrice} 
+  onChange={(e) => setMinPrice(e.target.value.match(/^\d*$/))} */}
+   
+ {/* <input type="text" name="maxPrice" 
+  placeholder='max'/>
+ // value={maxPrice} /> 
+  onChange={(e) => setmaxPrice(e.target.value.match(/^[a-zA-Z\s]*$/))} */}
+<input
+        type="text"
+        // value={maxPrice}
+        // onChange={(e) => setMaxPrice(e.target.value.match(/^\d*$/)[0])}
+        placeholder="Enter max price"
+      />
+
+</div>
 
       {/* Render HeaderMegaMenu component */}
       <Box pb={120}>
         <header className={headerClasses.header}>
           <Group justify="space-between" h="100%">
             <Group h="100%" gap={0} visibleFrom="sm">
-              <a href="#" className={headerClasses.link}>
+              {/* <a href="#" className={headerClasses.link}>
                 Home
-              </a>
+              </a> */}
               <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
                 <HoverCard.Target>
                   <a href="#" className={headerClasses.link}>
@@ -187,9 +211,9 @@ const Shop: NextPage = () => {
                   </div>
                 </HoverCard.Dropdown>
               </HoverCard>
-              <a href="#" className={headerClasses.link}>
+              {/* <a href="#" className={headerClasses.link}>
                 Learn
-              </a>
+              </a> */}
               <a href="#" className={headerClasses.link}>
                 Your products
               </a>
