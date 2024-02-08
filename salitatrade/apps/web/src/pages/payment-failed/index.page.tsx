@@ -7,7 +7,7 @@ import { Image } from '@mantine/core';
 
 import { RoutePath } from 'routes';
 
-const NotFound: NextPage = () => {
+const PaymentFailed: NextPage = () => {
   const handleClick = useCallback(() => {
     router.push(RoutePath.Home);
   }, []);
@@ -51,4 +51,4 @@ const NotFound: NextPage = () => {
   );
 };
 
-export default NotFound;
+export default PaymentFailed;

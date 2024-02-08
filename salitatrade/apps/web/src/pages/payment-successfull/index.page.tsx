@@ -8,7 +8,7 @@ import { Stack, Title, Text, Button, } from '@mantine/core';
 
 import { RoutePath } from 'routes';
 
-const NotFound: NextPage = () => {
+const PaymentSuccessfull: NextPage = () => {
   const handleClick = useCallback(() => {
     router.push(RoutePath.Home);
   }, []);
@@ -25,7 +25,8 @@ const NotFound: NextPage = () => {
         justify="center"
         display="flex"
       >
- <img src="./Party Popper.png" alt="Payment Success" />
+      
+ <img src="./Party Popper.svg" alt="Payment Success" />
 
         <div className='Congrats '>
        <h2> Congrats</h2>
@@ -48,6 +49,6 @@ const NotFound: NextPage = () => {
   );
 };
 
-export default NotFound;
+export default PaymentSuccessfull;
 
 
