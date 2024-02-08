@@ -67,15 +67,7 @@ const SignIn: NextPage = () => {
                 </Alert>
               )}
 
-              <Link
-                href={RoutePath.ForgotPassword}
-                type="router"
-                underline={false}
-                size="md"
-                align="center"
-              >
-                Forgot password?
-              </Link>
+            
             </Stack>
 
             <Button
@@ -84,22 +76,15 @@ const SignIn: NextPage = () => {
               fullWidth
               mt={34}
             >
-              Sign in
+              Create account
             </Button>
           </form>
         </Stack>
 
-        <div>Image </div>
+ 
 
         <Stack gap={34}>
-          <Button
-            component="a"
-            leftSection={<GoogleIcon />}
-            href={`${config.API_URL}/account/sign-in/google/auth`}
-            variant="outline"
-          >
-            Continue with Google
-          </Button>
+       
 
           <Group fz={16} justify="center" gap={12}>
             Don’t have an account?

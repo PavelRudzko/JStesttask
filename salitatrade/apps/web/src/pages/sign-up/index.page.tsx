@@ -157,21 +157,7 @@ const SignUp: NextPage = () => {
 
           <form onSubmit={handleSubmit(onSubmit)}>
             <Stack gap={20}>
-              {/* <TextInput
-                {...register('firstName')}
-                label="First Name"
-                maxLength={100}
-                placeholder="First Name"
-                error={errors.firstName?.message}
-              /> */}
-
-              {/* <TextInput
-                {...register('lastName')}
-                label="Last Name"
-                maxLength={100}
-                placeholder="Last Name"
-                error={errors.lastName?.message}
-              /> */}
+              
 
               <TextInput
                 {...register('email')}
@@ -207,15 +193,15 @@ const SignUp: NextPage = () => {
           </form>
         </Stack>
 
-        <Stack gap={34}>
-          <Button
+        <Stack gap={34}> 
+          {/* <Button
             component="a"
             leftSection={<GoogleIcon />}
             href={`${config.API_URL}/account/sign-in/google/auth`}
             variant="outline"
           >
             Continue with Google
-          </Button>
+          </Button> */}
 
           <Checkbox
         id="checkbox-id"
@@ -226,7 +212,7 @@ const SignUp: NextPage = () => {
       </Checkbox>
 
       <Checkbox
-        id="checkbox-id"
+        id="checkbox-id-number"
         label = "Must contain at least 1 number "
         checked={isChecked}
         onChange={handleCheckboxChange}
@@ -234,7 +220,7 @@ const SignUp: NextPage = () => {
       </Checkbox>
 
       <Checkbox
-        id="checkbox-id"
+        id="checkbox-id-letter"
         label = "Must contain lower case and capital letter "
         checked={isChecked}
         onChange={handleCheckboxChange}
@@ -253,7 +239,7 @@ const SignUp: NextPage = () => {
               Sign In
             </Link>
           </Group>
-        </Stack>
+      </Stack> 
       </Stack>
     </>
   );
