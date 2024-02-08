@@ -26,6 +26,15 @@ const NotFound: NextPage = () => {
       >
         <Title order={2}>Payment failed.</Title>
 
+        <Image
+      visibleFrom="sm"
+      alt="App Info"
+     // src="./failedimage.svg"
+      src = '/congrats.png'
+      h="100vh"
+    />
+        
+
         <Text mx={0} mt={20} mb={24} c="gray.6">
         Sorry , your payment failed.
         Wood you like to try again?

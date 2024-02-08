@@ -14,7 +14,7 @@ const UnauthorizedLayout: FC<UnauthorizedLayoutProps> = ({ children }) => (
     <Image
       visibleFrom="sm"
       alt="App Info"
-      src="/images/ship.svg"
+      src="/images/ShopyImage.svg"
       h="100vh"
     />
 

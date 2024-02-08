@@ -25,6 +25,8 @@ const NotFound: NextPage = () => {
         justify="center"
         display="flex"
       >
+ <img src="./Party Popper.png" alt="Payment Success" />
+
         <div className='Congrats '>
        <h2> Congrats</h2>
 
@@ -47,3 +49,5 @@ const NotFound: NextPage = () => {
 };
 
 export default NotFound;
+
+

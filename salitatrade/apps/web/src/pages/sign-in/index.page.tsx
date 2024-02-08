@@ -89,6 +89,8 @@ const SignIn: NextPage = () => {
           </form>
         </Stack>
 
+        <div>Image </div>
+
         <Stack gap={34}>
           <Button
             component="a"
