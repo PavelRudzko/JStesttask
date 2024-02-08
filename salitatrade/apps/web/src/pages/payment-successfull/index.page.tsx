@@ -15,8 +15,10 @@ const PaymentSuccessfull: NextPage = () => {
 
   return (
     <>
+     <img src= "./partypopper.png"  />
       <Head>
         <title>Payment Successfull</title>
+     
       </Head>
       <Stack
         m="auto"
@@ -26,7 +28,7 @@ const PaymentSuccessfull: NextPage = () => {
         display="flex"
       >
       
- <img src="./Party Popper.svg" alt="Payment Success" />
+ <img src = "./partypopper.svg"  />
 
         <div className='Congrats '>
        <h2> Congrats</h2>
@@ -35,7 +37,7 @@ const PaymentSuccessfull: NextPage = () => {
         <Title order={2}>Payment Successfull</Title>
 
         <Text mx={0} mt={20} mb={24} c="gray.6">
-        Huraay,you have comleted your payment!
+        Huraay,you have completed your payment!
         </Text>
 
         <Button
